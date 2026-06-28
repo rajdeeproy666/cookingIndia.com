@@ -33,7 +33,7 @@ const recipes = [
         "Add cream and cook for 2-3 minutes. Serve hot.",
       ],
       bn: [
-        "মুরগি দই, আদা-রসুন বাটা ও মসলা দিয়ে ৩০ মিনিট মেরিনেট করুন।",
+        "মুর���ি দই, আদা-রসুন বাটা ও মসলা দিয়ে ৩০ মিনিট মেরিনেট করুন।",
         "প্যানে মুরগি হালকা বাদামি হওয়া পর্যন্ত ভাজুন।",
         "আলাদা প্যানে পেঁয়াজ-টমেটো ভেজে মিহি করে ব্লেন্ড করুন।",
         "মাখন, মসলা ও মুরগি দিয়ে ১০ মিনিট সিমার করুন।",
@@ -102,7 +102,7 @@ const recipes = [
     },
     steps: {
       en: ["Blanch spinach and blend into puree.", "Sauté onion, garlic, and tomato with spices.", "Add spinach puree and simmer.", "Add paneer cubes and cook 5 minutes.", "Finish with cream and serve."],
-      bn: ["পালং শাক ব্লাঞ্চ করে পেস্ট করুন।", "পেঁয়াজ, রসুন, টমেটো ও মসলা ভাজুন।", "শাকের পেস্ট দিয়ে সিমার করুন।", "পনির দিয়ে ৫ মিনিট রান্না করুন।", "শেষে ক্রিম দিয়ে পরিবেশন করুন।"],
+      bn: ["পালং শাক ব্লাঞ্চ করে পেস্ট করুন।", "পেঁয়াজ, রসুন, টমেটো ও মসলা ভাজুন।", "পালং পেস্ট দিয়ে সিমার করুন।", "পনির কিউব দিয়ে ৫ মিনিট রান্না করুন।", "শেষে ক্রিম দিয়ে পরিবেশন করুন।"],
     },
   },
   {
@@ -115,40 +115,44 @@ const recipes = [
     },
     steps: {
       en: ["Wash and soak rice for 20 minutes.", "Heat ghee, add cumin seeds until fragrant.", "Add rice, water, and salt.", "Cook until rice is fluffy."],
-      bn: ["চাল ধুয়ে ২০ মিনিট ভিজিয়ে রাখুন।", "ঘি গরম করে জিরা দিন।", "চাল, পানি ও লবণ দিন।", "ভাত ঝরঝরে হওয়া পর্যন্ত রান্না করুন।"],
+      bn: ["চাল ধুয়ে ২০ মিনিট ভিজিয়ে রাখুন।", "ঘি গরম করে জিরা দিন।", "চাল, পানি ও লবণ দিন।", "ভাত ফুলে গেলে নামিয়ে নিন।"],
     },
   },
 ];
 
 const translations = {
   en: {
-    navHome: "Home", navRecipes: "Recipes", navSearch: "Recipe Search", navHistory: "Recipe History", navFavorites: "Favorites", navAbout: "About", navContact: "Contact",
+    navHome: "Home", navRecipes: "Recipes", navAddRecipe: "Add Recipe", navSearch: "Recipe Search", navHistory: "Recipe History", navFavorites: "Favorites", navAbout: "About", navContact: "Contact",
     homeTitle: "Welcome to Cooking India", homeDesc: "Discover delicious North Indian dishes from classic curries to comforting breads and festive sweets.",
-    recipesTitle: "Recipe Page", searchTitle: "Recipe Search", historyTitle: "Recipe History", historySubtitle: "Recently viewed recipes:",
+    recipesTitle: "Recipe Page", addRecipeTitle: "Add Your Recipe", addRecipeSub: "Share your recipe with name, photo, ingredients, and cooking process.", searchTitle: "Recipe Search", historyTitle: "Recipe History", historySubtitle: "Recently viewed recipes:",
     favTitle: "Favorite Recipes", favSubtitle: "Your saved favorite recipes:",
     aboutTitle: "About", aboutDesc1: "Cooking India celebrates the richness of North Indian cuisine. This website helps home cooks discover authentic recipes with easy, step-by-step instructions.",
     aboutDesc2: "From creamy paneer dishes to hearty dals and festive breads, our goal is to make Indian cooking simple and enjoyable.",
     contactTitle: "Contact", contactSub: "We’d love to hear from you!", labelName: "Name", labelEmail: "Email", labelMessage: "Message", sendBtn: "Send Message",
+    labelRecipeName: "Recipe Name", labelRecipePhoto: "Recipe Photo (Image URL)", labelRecipeIngredients: "Ingredients (one per line)", labelRecipeProcess: "Cooking Process / Steps (one step per line)", labelRecipeCategory: "Category", addRecipeBtn: "Add Recipe",
     footerText: "Made with ❤️ for North Indian food lovers", searchPlaceholder: "Search by recipe name or ingredient...",
     filterAll: "All", filterVeg: "Veg", filterNonVeg: "Non-Veg", filterCurry: "Curry", filterBread: "Bread", filterRice: "Rice",
     ingredients: "Ingredients", howToCook: "How to Cook", markViewed: "Mark as Viewed", addFav: "Add to Favorites", removeFav: "Remove Favorite",
     noRecipes: "No recipes found.", startSearch: "Start typing to search recipes...", noHistory: "No recipes viewed yet.", noFav: "No favorites yet.",
     viewedAdded: "added to history!", favAdded: "added to favorites!", favRemoved: "removed from favorites.", contactThanks: "Thank you! Your message has been received.",
+    addRecipeSuccess: "Recipe added successfully!", invalidPhotoUrl: "Please enter a valid image URL (jpg, jpeg, png, webp, gif, svg).",
     darkOn: "🌙 Dark Mode", darkOff: "☀️ Light Mode"
   },
   bn: {
-    navHome: "হোম", navRecipes: "রেসিপি", navSearch: "রেসিপি খোঁজ", navHistory: "রেসিপি হিস্টরি", navFavorites: "ফেভারিট", navAbout: "সম্পর্কে", navContact: "যোগাযোগ",
-    homeTitle: "কুকিং ইন্ডিয়াতে স্বাগতম", homeDesc: "ক্লাসিক কারি থেকে আরামদায়ক রুটি ও উৎসবের মিষ্টি—দারুণ সব উত্তর ভারতীয় খাবার আবিষ্কার করুন।",
-    recipesTitle: "রেসিপি পেজ", searchTitle: "রেসিপি খোঁজ", historyTitle: "রেসিপি হিস্টরি", historySubtitle: "সম্প্রতি দেখা রেসিপি:",
+    navHome: "হোম", navRecipes: "রেসিপি", navAddRecipe: "রেসিপি যোগ করুন", navSearch: "রেসিপি খোঁজ", navHistory: "রেসিপি হিস্টরি", navFavorites: "ফেভারিট", navAbout: "সম্পর্কে", navContact: "যোগাযোগ",
+    homeTitle: "কুকিং ইন্ডিয়াতে স্বাগতম", homeDesc: "ক্লাসিক কারি থেকে আরামদায়ক রুটি ও উৎসবের মিষ্টি—সুস্বাদু উত্তর ভারতীয় রান্না আবিষ্কার করুন।",
+    recipesTitle: "রেসিপি পেজ", addRecipeTitle: "আপনার রেসিপি যোগ করুন", addRecipeSub: "রেসিপির নাম, ছবি, উপকরণ এবং রান্নার ধাপ শেয়ার করুন।", searchTitle: "রেসিপি খোঁজ", historyTitle: "রেসিপি হিস্টরি", historySubtitle: "সম্প্র��ি দেখা রেসিপি:",
     favTitle: "প্রিয় রেসিপি", favSubtitle: "আপনার সংরক্ষিত প্রিয় রেসিপি:",
-    aboutTitle: "সম্পর্কে", aboutDesc1: "কুকিং ইন্ডিয়া উত্তর ভারতীয় রান্নার সমৃদ্ধিকে উদযাপন করে। সহজ ধাপে ধাপে নির্দেশনায় আসল রেসিপি শিখতে সাহায্য করে।",
-    aboutDesc2: "ক্রিমি পনির ডিশ থেকে পুষ্টিকর ডাল ও রুটি—আমাদের লক্ষ্য ভারতীয় রান্নাকে সহজ ও আনন্দদায়ক করা।",
+    aboutTitle: "সম্পর্কে", aboutDesc1: "কুকিং ইন্ডিয়া উত্তর ভারতীয় রান্নার সমৃদ্ধিকে উদযাপন করে। সহজ ধাপে আসল রেসিপি শিখতে এই সাইটটি সহায়তা করে।",
+    aboutDesc2: "ক্রিমি পনির ডিশ থেকে পুষ্টিকর ডাল ও রুটি—আমাদের লক্ষ্য ভারতীয় রান্না সহজ ও আনন্দদায়ক করা।",
     contactTitle: "যোগাযোগ", contactSub: "আমরা আপনার কথা শুনতে চাই!", labelName: "নাম", labelEmail: "ইমেইল", labelMessage: "বার্তা", sendBtn: "বার্তা পাঠান",
+    labelRecipeName: "রেসিপির নাম", labelRecipePhoto: "রেসিপির ছবি (ইমেজ URL)", labelRecipeIngredients: "উপকরণ (প্রতি লাইনে একটি)", labelRecipeProcess: "রান্নার ধাপ (প্রতি লাইনে একটি ধাপ)", labelRecipeCategory: "ক্যাটাগরি", addRecipeBtn: "রেসিপি যোগ করুন",
     footerText: "উত্তর ভারতীয় খাবারপ্রেমীদের জন্য ভালোবাসা দিয়ে তৈরি", searchPlaceholder: "রেসিপির নাম বা উপকরণ দিয়ে খুঁজুন...",
     filterAll: "সব", filterVeg: "ভেজ", filterNonVeg: "নন-ভেজ", filterCurry: "কারি", filterBread: "রুটি", filterRice: "ভাত",
-    ingredients: "উপকরণ", howToCook: "রান্নার ধাপ", markViewed: "হিস্টরিতে যোগ করুন", addFav: "ফেভারিটে যোগ করুন", removeFav: "ফেভারিট থেকে সরান",
+    ingredients: "উপকরণ", howToCook: "রান্নার ধাপ", markViewed: "হিস্টরিতে যোগ করুন", addFav: "ফেভারিটে যোগ করুন", removeFav: "ফেভারিট সরান",
     noRecipes: "কোনো রেসিপি পাওয়া যায়নি।", startSearch: "রেসিপি খুঁজতে টাইপ করুন...", noHistory: "এখনও কোনো রেসিপি দেখা হয়নি।", noFav: "এখনও কোনো ফেভারিট নেই।",
-    viewedAdded: "হিস্টরিতে যোগ হয়েছে!", favAdded: "ফেভারিটে যোগ হয়েছে!", favRemoved: "ফেভারিট থেকে সরানো হয়েছে।", contactThanks: "ধন্যবাদ! আপনার বার্তা আমরা পেয়েছি।",
+    viewedAdded: "হিস্টরিতে যোগ হয়েছে!", favAdded: "ফেভারিটে যোগ হয়েছে!", favRemoved: "ফেভারিট থেকে সরানো হয়েছে।", contactThanks: "ধন্যবাদ! আপনার বার্তা গ্রহণ করা হয়েছে।",
+    addRecipeSuccess: "রেসিপি সফলভাবে যোগ হয়েছে!", invalidPhotoUrl: "একটি সঠিক ইমেজ URL দিন (jpg, jpeg, png, webp, gif, svg)।",
     darkOn: "🌙 ডার্ক মোড", darkOff: "☀️ লাইট মোড"
   }
 };
@@ -166,11 +170,17 @@ const menuToggle = document.getElementById("menuToggle");
 const navbar = document.getElementById("navbar");
 const darkModeToggle = document.getElementById("darkModeToggle");
 const langToggle = document.getElementById("langToggle");
+const addRecipeForm = document.getElementById("addRecipeForm");
+const addRecipeMsg = document.getElementById("addRecipeMsg");
 
 function t(key) { return translations[currentLang][key] || key; }
 
 function getFavorites() { return JSON.parse(localStorage.getItem("favorites") || "[]"); }
 function saveFavorites(favs) { localStorage.setItem("favorites", JSON.stringify(favs)); }
+
+function isValidImageUrl(url) {
+  return /^https?:\/\/.+\.(jpg|jpeg|png|webp|gif|svg)(\?.*)?$/i.test(url.trim());
+}
 
 function createRecipeCard(recipe) {
   const card = document.createElement("article");
@@ -317,6 +327,59 @@ function setupFilters() {
   });
 }
 
+function setupAddRecipeForm() {
+  addRecipeForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("recipeNameInput").value.trim();
+    const image = document.getElementById("recipePhotoInput").value.trim();
+    const ingredientsRaw = document.getElementById("recipeIngredientsInput").value;
+    const stepsRaw = document.getElementById("recipeStepsInput").value;
+    const category = document.getElementById("recipeCategoryInput").value;
+
+    if (!isValidImageUrl(image)) {
+      addRecipeMsg.textContent = t("invalidPhotoUrl");
+      addRecipeMsg.classList.add("error");
+      return;
+    }
+
+    const ingredients = ingredientsRaw
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    const steps = stepsRaw
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    const newRecipe = {
+      name: {
+        en: name,
+        bn: name,
+      },
+      category: [category],
+      image,
+      ingredients: {
+        en: ingredients,
+        bn: ingredients,
+      },
+      steps: {
+        en: steps,
+        bn: steps,
+      },
+    };
+
+    recipes.unshift(newRecipe);
+    applyFilter(currentFilter);
+    renderSearchResults();
+
+    addRecipeMsg.textContent = t("addRecipeSuccess");
+    addRecipeMsg.classList.remove("error");
+    addRecipeForm.reset();
+  });
+}
+
 menuToggle.addEventListener("click", () => navbar.classList.toggle("open"));
 
 darkModeToggle.addEventListener("click", () => {
@@ -366,6 +429,7 @@ if (localStorage.getItem("darkMode") === "1") {
 applyTranslations();
 setupNavigation();
 setupFilters();
+setupAddRecipeForm();
 applyFilter("all");
 renderSearchResults();
 renderHistory();

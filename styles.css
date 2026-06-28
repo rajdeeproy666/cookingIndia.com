@@ -186,7 +186,8 @@ main {
 
 #searchInput,
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.add-recipe-form select {
   width: 100%;
   max-width: 520px;
   padding: 0.7rem;
@@ -203,9 +204,17 @@ main {
   max-width: 560px;
 }
 
+.add-recipe-form {
+  margin-top: 1rem;
+}
+
 .contact-msg {
   font-weight: 700;
   color: #1f8a3d;
+}
+
+.contact-msg.error {
+  color: #c0392b;
 }
 
 #historyList,
