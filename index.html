@@ -8,25 +8,31 @@
   </head>
   <body>
     <header class="site-header">
-      <h1>🍲 Cooking India</h1>
-      <p>Authentic North Indian Recipes</p>
+      <h1 id="siteTitle">🍲 Cooking India</h1>
+      <p id="siteSubtitle">Authentic North Indian Recipes</p>
+
+      <div class="header-controls">
+        <button id="darkModeToggle" class="control-btn">🌙 Dark Mode</button>
+        <button id="langToggle" class="control-btn">বাংলা</button>
+      </div>
     </header>
 
     <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰ Menu</button>
 
     <nav class="navbar" id="navbar">
-      <button class="nav-link active" data-target="home">Home</button>
-      <button class="nav-link" data-target="recipes">Recipes</button>
-      <button class="nav-link" data-target="search">Recipe Search</button>
-      <button class="nav-link" data-target="history">Recipe History</button>
-      <button class="nav-link" data-target="about">About</button>
-      <button class="nav-link" data-target="contact">Contact</button>
+      <button class="nav-link active" data-target="home" data-i18n="navHome">Home</button>
+      <button class="nav-link" data-target="recipes" data-i18n="navRecipes">Recipes</button>
+      <button class="nav-link" data-target="search" data-i18n="navSearch">Recipe Search</button>
+      <button class="nav-link" data-target="history" data-i18n="navHistory">Recipe History</button>
+      <button class="nav-link" data-target="favorites" data-i18n="navFavorites">Favorites</button>
+      <button class="nav-link" data-target="about" data-i18n="navAbout">About</button>
+      <button class="nav-link" data-target="contact" data-i18n="navContact">Contact</button>
     </nav>
 
     <main>
       <section id="home" class="page active">
-        <h2>Welcome to Cooking India</h2>
-        <p>
+        <h2 data-i18n="homeTitle">Welcome to Cooking India</h2>
+        <p data-i18n="homeDesc">
           Discover delicious North Indian dishes from classic curries to
           comforting breads and festive sweets.
         </p>
@@ -40,63 +46,77 @@
       </section>
 
       <section id="recipes" class="page">
-        <h2>Recipe Page</h2>
+        <h2 data-i18n="recipesTitle">Recipe Page</h2>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+          <button class="filter-btn" data-filter="veg" data-i18n="filterVeg">Veg</button>
+          <button class="filter-btn" data-filter="non-veg" data-i18n="filterNonVeg">Non-Veg</button>
+          <button class="filter-btn" data-filter="curry" data-i18n="filterCurry">Curry</button>
+          <button class="filter-btn" data-filter="bread" data-i18n="filterBread">Bread</button>
+          <button class="filter-btn" data-filter="rice" data-i18n="filterRice">Rice</button>
+        </div>
+
         <div id="recipesContainer" class="recipe-grid"></div>
       </section>
 
       <section id="search" class="page">
-        <h2>Recipe Search</h2>
+        <h2 data-i18n="searchTitle">Recipe Search</h2>
         <input
           id="searchInput"
           type="text"
           placeholder="Search by recipe name or ingredient..."
+          data-i18n-placeholder="searchPlaceholder"
         />
         <div id="searchResults" class="recipe-grid"></div>
       </section>
 
       <section id="history" class="page">
-        <h2>Recipe History</h2>
-        <p>Recently viewed recipes:</p>
+        <h2 data-i18n="historyTitle">Recipe History</h2>
+        <p data-i18n="historySubtitle">Recently viewed recipes:</p>
         <ul id="historyList"></ul>
       </section>
 
+      <section id="favorites" class="page">
+        <h2 data-i18n="favTitle">Favorite Recipes</h2>
+        <p data-i18n="favSubtitle">Your saved favorite recipes:</p>
+        <ul id="favoritesList"></ul>
+      </section>
+
       <section id="about" class="page">
-        <h2>About</h2>
-        <p>
+        <h2 data-i18n="aboutTitle">About</h2>
+        <p data-i18n="aboutDesc1">
           Cooking India celebrates the richness of North Indian cuisine.
           This website helps home cooks discover authentic recipes with easy,
           step-by-step instructions.
         </p>
-        <p>
+        <p data-i18n="aboutDesc2">
           From creamy paneer dishes to hearty dals and festive breads,
           our goal is to make Indian cooking simple and enjoyable.
         </p>
       </section>
 
       <section id="contact" class="page">
-        <h2>Contact</h2>
-        <p>We’d love to hear from you!</p>
+        <h2 data-i18n="contactTitle">Contact</h2>
+        <p data-i18n="contactSub">We’d love to hear from you!</p>
         <form id="contactForm" class="contact-form">
-          <label>
-            Name
+          <label data-i18n="labelName">Name
             <input type="text" name="name" required />
           </label>
-          <label>
-            Email
+          <label data-i18n="labelEmail">Email
             <input type="email" name="email" required />
           </label>
-          <label>
-            Message
+          <label data-i18n="labelMessage">Message
             <textarea name="message" rows="5" required></textarea>
           </label>
-          <button type="submit" class="view-btn">Send Message</button>
+          <button type="submit" class="view-btn" data-i18n="sendBtn">Send Message</button>
         </form>
         <p id="contactMsg" class="contact-msg"></p>
       </section>
     </main>
 
     <footer>
-      <p>Made with ❤️ for North Indian food lovers</p>
+      <p data-i18n="footerText">Made with ❤️ for North Indian food lovers</p>
     </footer>
 
     <script src="script.js"></script>

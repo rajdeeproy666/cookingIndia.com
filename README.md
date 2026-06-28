@@ -8,6 +8,10 @@ A simple and beautiful North Indian recipe website built with HTML, CSS, and Jav
 - Recipe page with ingredients and cooking steps
 - Recipe search by name or ingredient
 - Recipe history (recently viewed recipes with localStorage)
+- Favorite recipes (save/remove favorites)
+- Category filters (Veg, Non-Veg, Curry, Bread, Rice)
+- Dark mode toggle
+- Language toggle (English ↔ Bangla)
 - About and Contact sections
 - Mobile-friendly responsive menu
 
