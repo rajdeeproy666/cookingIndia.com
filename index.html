@@ -22,6 +22,7 @@
     <nav class="navbar" id="navbar">
       <button class="nav-link active" data-target="home" data-i18n="navHome">Home</button>
       <button class="nav-link" data-target="recipes" data-i18n="navRecipes">Recipes</button>
+      <button class="nav-link" data-target="addRecipe" data-i18n="navAddRecipe">Add Recipe</button>
       <button class="nav-link" data-target="search" data-i18n="navSearch">Recipe Search</button>
       <button class="nav-link" data-target="history" data-i18n="navHistory">Recipe History</button>
       <button class="nav-link" data-target="favorites" data-i18n="navFavorites">Favorites</button>
@@ -58,6 +59,42 @@
         </div>
 
         <div id="recipesContainer" class="recipe-grid"></div>
+      </section>
+
+      <section id="addRecipe" class="page">
+        <h2 data-i18n="addRecipeTitle">Add Your Recipe</h2>
+        <p data-i18n="addRecipeSub">Share your recipe with name, photo, ingredients, and cooking process.</p>
+
+        <form id="addRecipeForm" class="contact-form add-recipe-form">
+          <label data-i18n="labelRecipeName">Recipe Name
+            <input id="recipeNameInput" type="text" name="recipeName" required />
+          </label>
+
+          <label data-i18n="labelRecipePhoto">Recipe Photo (Image URL)
+            <input id="recipePhotoInput" type="url" name="recipePhoto" placeholder="https://example.com/recipe.jpg" required />
+          </label>
+
+          <label data-i18n="labelRecipeIngredients">Ingredients (one per line)
+            <textarea id="recipeIngredientsInput" name="recipeIngredients" rows="6" required></textarea>
+          </label>
+
+          <label data-i18n="labelRecipeProcess">Cooking Process / Steps (one step per line)
+            <textarea id="recipeStepsInput" name="recipeSteps" rows="6" required></textarea>
+          </label>
+
+          <label data-i18n="labelRecipeCategory">Category
+            <select id="recipeCategoryInput" name="recipeCategory" required>
+              <option value="veg" data-i18n="filterVeg">Veg</option>
+              <option value="non-veg" data-i18n="filterNonVeg">Non-Veg</option>
+              <option value="curry" data-i18n="filterCurry">Curry</option>
+              <option value="bread" data-i18n="filterBread">Bread</option>
+              <option value="rice" data-i18n="filterRice">Rice</option>
+            </select>
+          </label>
+
+          <button type="submit" class="view-btn" data-i18n="addRecipeBtn">Add Recipe</button>
+        </form>
+        <p id="addRecipeMsg" class="contact-msg"></p>
       </section>
 
       <section id="search" class="page">
