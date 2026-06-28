@@ -1,6 +1,8 @@
 const recipes = [
   {
     name: "Butter Chicken",
+    image:
+      "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "500g chicken",
       "2 tomatoes",
@@ -20,6 +22,8 @@ const recipes = [
   },
   {
     name: "Chole Bhature",
+    image:
+      "https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "2 cups chickpeas",
       "2 onions",
@@ -39,6 +43,8 @@ const recipes = [
   },
   {
     name: "Aloo Paratha",
+    image:
+      "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "2 cups wheat flour",
       "3 boiled potatoes",
@@ -58,6 +64,8 @@ const recipes = [
   },
   {
     name: "Palak Paneer",
+    image:
+      "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "250g paneer",
       "2 bunches spinach",
@@ -77,6 +85,8 @@ const recipes = [
   },
   {
     name: "Dal Makhani",
+    image:
+      "https://images.unsplash.com/photo-1546833998-877b37c2e5c6?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "1 cup whole urad dal",
       "1/4 cup rajma",
@@ -96,6 +106,8 @@ const recipes = [
   },
   {
     name: "Rajma Masala",
+    image:
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "2 cups rajma",
       "2 onions",
@@ -113,6 +125,8 @@ const recipes = [
   },
   {
     name: "Paneer Butter Masala",
+    image:
+      "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "250g paneer",
       "2 tomatoes",
@@ -131,6 +145,8 @@ const recipes = [
   },
   {
     name: "Baingan Bharta",
+    image:
+      "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "1 large eggplant",
       "1 onion",
@@ -149,6 +165,8 @@ const recipes = [
   },
   {
     name: "Kadhai Paneer",
+    image:
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "250g paneer",
       "Capsicum",
@@ -167,6 +185,8 @@ const recipes = [
   },
   {
     name: "Jeera Rice",
+    image:
+      "https://images.unsplash.com/photo-1512058564366-c9e3e0467d1f?auto=format&fit=crop&w=1000&q=80",
     ingredients: [
       "1 cup basmati rice",
       "2 tsp cumin seeds",
@@ -187,6 +207,8 @@ const recipesContainer = document.getElementById("recipesContainer");
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
 const historyList = document.getElementById("historyList");
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.getElementById("navbar");
 
 function createRecipeCard(recipe) {
   const card = document.createElement("article");
@@ -198,6 +220,7 @@ function createRecipeCard(recipe) {
   const stepsList = recipe.steps.map((step) => `<li>${step}</li>`).join("");
 
   card.innerHTML = `
+    <img class="recipe-image" src="${recipe.image}" alt="${recipe.name}" />
     <h3>${recipe.name}</h3>
     <h4>Ingredients</h4>
     <ul>${ingredientsList}</ul>
@@ -276,9 +299,26 @@ function setupNavigation() {
       link.classList.add("active");
       const target = document.getElementById(link.dataset.target);
       target.classList.add("active");
+
+      if (window.innerWidth <= 720) {
+        navbar.classList.remove("open");
+      }
     });
   });
 }
+
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("open");
+});
+
+const contactForm = document.getElementById("contactForm");
+const contactMsg = document.getElementById("contactMsg");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  contactMsg.textContent = "Thank you! Your message has been received.";
+  contactForm.reset();
+});
 
 renderRecipes(recipes, recipesContainer);
 searchResults.innerHTML = "<p>Start typing to search recipes...</p>";

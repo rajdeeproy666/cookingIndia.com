@@ -12,11 +12,15 @@
       <p>Authentic North Indian Recipes</p>
     </header>
 
-    <nav class="navbar">
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰ Menu</button>
+
+    <nav class="navbar" id="navbar">
       <button class="nav-link active" data-target="home">Home</button>
       <button class="nav-link" data-target="recipes">Recipes</button>
       <button class="nav-link" data-target="search">Recipe Search</button>
       <button class="nav-link" data-target="history">Recipe History</button>
+      <button class="nav-link" data-target="about">About</button>
+      <button class="nav-link" data-target="contact">Contact</button>
     </nav>
 
     <main>
@@ -54,6 +58,40 @@
         <h2>Recipe History</h2>
         <p>Recently viewed recipes:</p>
         <ul id="historyList"></ul>
+      </section>
+
+      <section id="about" class="page">
+        <h2>About</h2>
+        <p>
+          Cooking India celebrates the richness of North Indian cuisine.
+          This website helps home cooks discover authentic recipes with easy,
+          step-by-step instructions.
+        </p>
+        <p>
+          From creamy paneer dishes to hearty dals and festive breads,
+          our goal is to make Indian cooking simple and enjoyable.
+        </p>
+      </section>
+
+      <section id="contact" class="page">
+        <h2>Contact</h2>
+        <p>We’d love to hear from you!</p>
+        <form id="contactForm" class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="view-btn">Send Message</button>
+        </form>
+        <p id="contactMsg" class="contact-msg"></p>
       </section>
     </main>
 
