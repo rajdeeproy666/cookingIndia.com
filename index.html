@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking India | North Indian Recipes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>🍲 Cooking India</h1>
+      <p>Authentic North Indian Recipes</p>
+    </header>
+
+    <nav class="navbar">
+      <button class="nav-link active" data-target="home">Home</button>
+      <button class="nav-link" data-target="recipes">Recipes</button>
+      <button class="nav-link" data-target="search">Recipe Search</button>
+      <button class="nav-link" data-target="history">Recipe History</button>
+    </nav>
+
+    <main>
+      <section id="home" class="page active">
+        <h2>Welcome to Cooking India</h2>
+        <p>
+          Discover delicious North Indian dishes from classic curries to
+          comforting breads and festive sweets.
+        </p>
+
+        <div class="photo-grid">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80" alt="Indian curry in bowl" />
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Freshly cooked Indian food" />
+          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=900&q=80" alt="Butter naan and curry" />
+          <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80" alt="Spices and Indian cuisine" />
+        </div>
+      </section>
+
+      <section id="recipes" class="page">
+        <h2>Recipe Page</h2>
+        <div id="recipesContainer" class="recipe-grid"></div>
+      </section>
+
+      <section id="search" class="page">
+        <h2>Recipe Search</h2>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search by recipe name or ingredient..."
+        />
+        <div id="searchResults" class="recipe-grid"></div>
+      </section>
+
+      <section id="history" class="page">
+        <h2>Recipe History</h2>
+        <p>Recently viewed recipes:</p>
+        <ul id="historyList"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ for North Indian food lovers</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

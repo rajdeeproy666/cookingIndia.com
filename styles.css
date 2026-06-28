@@ -1,0 +1,145 @@
+:root {
+  --primary: #d35400;
+  --secondary: #f8f1e7;
+  --accent: #8e2f00;
+  --text: #2c2c2c;
+  --white: #ffffff;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+}
+
+.site-header {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--white);
+  padding: 1.2rem;
+}
+
+.site-header h1 {
+  margin: 0;
+}
+
+.site-header p {
+  margin: 0.35rem 0 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #fff6eb;
+  padding: 0.75rem;
+  border-bottom: 1px solid #f0d4b5;
+}
+
+.nav-link {
+  border: none;
+  background: var(--white);
+  color: var(--primary);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+main {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 0 1rem 2rem;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.photo-grid,
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.recipe-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.recipe-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.recipe-card ul,
+.recipe-card ol {
+  padding-left: 1.2rem;
+}
+
+.view-btn {
+  border: none;
+  margin-top: 0.6rem;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #d9c4ae;
+  margin-bottom: 1rem;
+}
+
+#historyList {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+  min-height: 90px;
+}
+
+#historyList li {
+  margin-bottom: 0.35rem;
+}
+
+footer {
+  text-align: center;
+  color: #6b5a4a;
+  padding: 1rem;
+}
